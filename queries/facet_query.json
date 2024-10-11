@@ -1,0 +1,33 @@
+{
+  "q": "*",
+  "filters": [
+    {
+      "type": "range",
+      "field_name": "birthday",
+      "values": [
+        {
+          "from": "2000-01-01",
+          "to": "*"
+        }
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "name": "Total Pets",
+      "field_name": "num_pets",
+      "type": "sum"
+    },
+    {
+      "name": "Avg Pets",
+      "field_name": "num_pets",
+      "type": "avg"
+    }
+  ],
+  "sort": [
+    {
+      "field_name": "birthday",
+      "order": "asc"
+    }
+  ]
+}
